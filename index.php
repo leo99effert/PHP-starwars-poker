@@ -1,7 +1,7 @@
 <?php 
 
-echo 'Hello World!';
+echo 'Welcome to the ';
 
 ?>
 
-<a href="sabacc.php">sabacc</a>
+<a href="sabacc.php">table</a>
