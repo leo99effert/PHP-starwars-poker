@@ -1,0 +1,70 @@
+.game{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: center;
+    justify-content: center;
+}
+.cards{
+    display: flex;
+    gap: 1em;
+}
+.hand-area{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+.board-area{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+.card{
+    border: 5px solid black;
+    width: 4.5em;
+    height: 7.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-text{
+    font-size: 2.8em;
+    margin: 0;
+}
+.card-options{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.2em;
+}
+.card-options input{
+    width: 5.2em;
+}
+.action-area input{
+    width: 10em;
+}
+.played-card{
+    border: 5px solid lime;
+}
+.highscore p{
+    margin: 0;
+    color: lime;
+}
+.bombs{
+    margin: 0;
+    color: red;
+    margin: 0;
+}
+.idiots{
+    margin: 0;
+    color: purple;
+    margin: 0;
+}
+.history{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 0.5em;
+}
