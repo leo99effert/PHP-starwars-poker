@@ -21,7 +21,7 @@
 }
 .card{
     border: 5px solid black;
-    width: 4.5em;
+    width: 4em;
     height: 12em; /* was 7.5em but it didnt work with the hosting provider*/
     display: flex;
     flex-direction: column;
@@ -40,7 +40,7 @@
     margin-bottom: 0.2em;
 }
 .card-options input{
-    width: 4.4em;
+    width: 4em;
     height: 1.4em;
 }
 .action-area input{
