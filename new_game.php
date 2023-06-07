@@ -1,6 +1,8 @@
 <?php
 
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 if(in_array(0, $_SESSION['hand']) and
    in_array(2, $_SESSION['hand']) || in_array(-2, $_SESSION['hand']) and

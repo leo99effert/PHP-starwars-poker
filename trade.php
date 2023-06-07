@@ -1,6 +1,9 @@
 <?php
 
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 $card = $_POST['card'];
 $index = array_search($card, $_SESSION['hand']);
 unset($_SESSION['hand'][$index]);
