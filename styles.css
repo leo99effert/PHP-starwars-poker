@@ -22,7 +22,7 @@
 .card{
     border: 5px solid black;
     width: 4.5em;
-    height: 7.5em;
+    height: 12em; /* was 7.5em but it didnt work with the hosting provider*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
