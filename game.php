@@ -8,7 +8,7 @@ if (!isset($_SESSION['round'])) {
     $_SESSION['round'] = 1;
 }
 if (!isset($_SESSION['hand'])) {
-    $_SESSION['hand'] = [rand(-10, 10), rand(-10, 10)];
+    $_SESSION['hand'] = [rand(-13, 13), rand(-13, 13)];
 }
 if (!isset($_SESSION['board'])) {
     $_SESSION['board'] = [];
