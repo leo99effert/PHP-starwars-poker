@@ -55,7 +55,17 @@ if (session_status() === PHP_SESSION_NONE) {
                 <?php endforeach; ?>
             </div>
         </div>
-        <h3><?= $_SESSION['round'] <= 3 ? 'Turn '.$_SESSION['round'].'/3'  : 'Game Over' ?></h3>
+        <h3><?= $_SESSION['round'] <= 3 ? 'Turn '.$_SESSION['round'].'/3'  : null ?></h3>
+        <?php 
+        if($_SESSION['round'] > 3){
+            if(abs($_SESSION['total']) < 20 or abs($_SESSION['total']) > 23 and
+            !(in_array(0, $_SESSION['hand']) and
+            in_array(2, $_SESSION['hand']) || in_array(-2, $_SESSION['hand']) and
+            in_array(3, $_SESSION['hand']) || in_array(-3, $_SESSION['hand'])))
+            echo '<h3>Better luck next time!</h3>';
+            else echo '<h3>Well Done!</h3>';
+        }
+        ?>
         <div class="action-area">
             <?php if ($_SESSION['round'] <= 3) : ?>
                 <form action="new_card.php" method="post">
