@@ -5,8 +5,8 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 if(in_array(0, $_SESSION['hand']) and
-   in_array(2, $_SESSION['hand']) || in_array(-2, $_SESSION['hand']) and
-   in_array(3, $_SESSION['hand']) || in_array(-3, $_SESSION['hand']))
+  (in_array(2, $_SESSION['hand']) || in_array(-2, $_SESSION['hand'])) and
+  (in_array(3, $_SESSION['hand']) || in_array(-3, $_SESSION['hand'])))
        $_SESSION['idiots']++; 
 else if(abs($_SESSION['total']) > 23) $_SESSION['bombs']++;
 else $_SESSION['highscore'][] = abs($_SESSION['total']);
