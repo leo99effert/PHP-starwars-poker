@@ -22,7 +22,7 @@ if (session_status() === PHP_SESSION_NONE) {
 <body>
 
     <div class="game">
-        <p>Round: <?= $_SESSION['round'] <= 3 ? $_SESSION['round']  : 'Game finished' ?> <br> Total: <?= $_SESSION['total'] ?></p>
+        <?= $_SESSION['round'] <= 3 ? '<h2>Score: '.$_SESSION['total'].'</h2>' : '<h1>Final Score: '. $_SESSION['total'].'</h1>' ?>
         <div class="cards">
             <div class="hand-area">
                 <?php foreach ($_SESSION['hand'] as $card) : ?>
@@ -55,6 +55,7 @@ if (session_status() === PHP_SESSION_NONE) {
                 <?php endforeach; ?>
             </div>
         </div>
+        <h3><?= $_SESSION['round'] <= 3 ? 'Turn '.$_SESSION['round'].'/3'  : 'Game Over' ?></h3>
         <div class="action-area">
             <?php if ($_SESSION['round'] <= 3) : ?>
                 <form action="new_card.php" method="post">
