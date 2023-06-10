@@ -74,10 +74,11 @@ if (session_status() === PHP_SESSION_NONE) {
                 <form action="stand.php" method="post">
                     <input type="submit" name="submit" value="Stand">
                 </form>
+            <?php else : ?>
+                <form action="new_game.php" method="post">
+                    <input type="submit" name="submit" value="New Game">
+                </form>
             <?php endif; ?>
-            <form action="new_game.php" method="post">
-                <input type="submit" name="submit" value="New Game">
-            </form>
         </div>
         <div class="history">
             <p class="idiots">Idiot Arrays: - <?= $_SESSION['idiots'] ?></p>
