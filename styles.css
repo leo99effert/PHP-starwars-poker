@@ -1,28 +1,38 @@
 .game{
+    width: 28em;
     display: flex;
     flex-direction: column;
     gap: 0.5em;
     align-items: center;
     justify-content: center;
+    margin: auto;
 }
 .cards{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     gap: 0.5em;
 }
 .hand-area{
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     gap: 0.2em;
 }
 .board-area{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
     gap: 0.2em;
 }
 .card{
     border: 4px solid black;
-    width: 5em;
-    height: 10em; /* was 7.5em but it didnt work with the hosting provider*/
+    width: 4.5em;
+    height: 10em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -39,7 +49,7 @@
     align-items: center;
 }
 .card-options input{
-    width: 5em;
+    width: 4.5em;
     height: 2em;
 }
 .action-area input{
