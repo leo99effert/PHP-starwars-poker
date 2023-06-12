@@ -1,5 +1,6 @@
-<?= 'Welcome to the '; ?>
-<a href="sabacc.php">table</a>
+<button>
+    <a href="sabacc.php" style="text-decoration: none; font-size: 4em;">Play Sabacc</a>
+</button>
 <br>
 <br>
 <p>In Sabacc the goal is to get a score as close to 23 or -23 as possible without going over.</p>
