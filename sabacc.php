@@ -32,15 +32,15 @@ if (session_status() === PHP_SESSION_NONE) {
                             <div class="card-options">
                                 <form action="play.php" method="post">
                                     <input type="hidden" name="card" value="<?= (int)$card ?>">
-                                    <input type="submit" name="submit" value="Play">
+                                    <input type="submit" name="submit" value="Play" class="play-button">
                                 </form>
                                 <form action="trade.php" method="post">
                                     <input type="hidden" name="card" value="<?= (int)$card ?>">
-                                    <input type="submit" name="submit" value="Trade">
+                                    <input type="submit" name="submit" value="Trade" class="trade-button">
                                 </form>
                                 <form action="throw.php" method="post">
                                     <input type="hidden" name="card" value="<?= (int)$card ?>">
-                                    <input type="submit" name="submit" value="Throw">
+                                    <input type="submit" name="submit" value="Throw" class="throw-button">
                                 </form>
                             </div>
                         <?php endif; ?>
@@ -69,14 +69,14 @@ if (session_status() === PHP_SESSION_NONE) {
         <div class="action-area">
             <?php if ($_SESSION['round'] <= 3) : ?>
                 <form action="new_card.php" method="post">
-                    <input type="submit" name="submit" value="New Card">
+                    <input type="submit" name="submit" value="New Card" class="newcard-button">
                 </form>
                 <form action="stand.php" method="post">
-                    <input type="submit" name="submit" value="Stand">
+                    <input type="submit" name="submit" value="Stand" class="stand-button">
                 </form>
             <?php else : ?>
                 <form action="new_game.php" method="post">
-                    <input type="submit" name="submit" value="New Game">
+                    <input type="submit" name="submit" value="New Game" class="newgame-button">
                 </form>
             <?php endif; ?>
         </div>
@@ -90,6 +90,15 @@ if (session_status() === PHP_SESSION_NONE) {
                 <?php endforeach; ?>
             </div>
         </div>  
+        <div class="tutorial">
+            <h5>Basic Actions:</h5>
+            <p>New Card - Get one card</p>
+            <p>Stand - Skip one turn</p>
+            <h5>On-Card Actions:</h5>
+            <p>Play - "Lock in" this card and replace all cards that are not locked</p>
+            <p>Trade - Replace this card</p>
+            <p>Throw - Remove this card</p>
+        </div>
     </div>
 
 </body>

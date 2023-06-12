@@ -7,22 +7,22 @@
 }
 .cards{
     display: flex;
-    gap: 1em;
+    gap: 0.5em;
 }
 .hand-area{
     display: flex;
     align-items: center;
-    gap: 0.5em;
+    gap: 0.2em;
 }
 .board-area{
     display: flex;
     align-items: center;
-    gap: 0.5em;
+    gap: 0.2em;
 }
 .card{
-    border: 5px solid black;
-    width: 4em;
-    height: 12em; /* was 7.5em but it didnt work with the hosting provider*/
+    border: 4px solid black;
+    width: 5em;
+    height: 10em; /* was 7.5em but it didnt work with the hosting provider*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -37,17 +37,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 0.2em;
 }
 .card-options input{
-    width: 4em;
-    height: 1.4em;
+    width: 5em;
+    height: 2em;
 }
 .action-area input{
-    width: 10em;
+    font-size: 2em;
+    width: 8em;
+}
+.action-area{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
 }
 .played-card{
-    border: 5px solid lime;
+    border: 4px solid lime;
 }
 .highscore p{
     margin: 0;
@@ -71,4 +76,28 @@
 }
 h3 {
     margin: 0.2em;
+}
+.play-button{
+    border: 3px solid lime;
+    
+}
+.trade-button{
+    border: 3px solid blue;
+}
+.throw-button{
+    border: 3px solid red;
+}
+.newcard-button{
+    border: 5px solid lime;
+}
+.stand-button{
+    border: 5px solid red;
+}
+.newgame-button{
+    border: 5px solid blue;
+}
+.tutorial{
+    border: 2px solid purple;
+    margin: 1em;
+    padding: 1em;
 }
